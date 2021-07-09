@@ -1,0 +1,179 @@
+body{
+/*
+	background-color:rgb(239,236,240);
+	background-color: #f4eee5;
+*/
+	font-family: 'Poppins', sans-serif;
+
+	
+}
+/*start nav */
+.navbar {
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	width: 100%;
+	transition: .5s;
+	height: 90px;
+	background: #fff;
+	box-shadow: 1px 2px 15px rgb(100 100 100 / 30%);
+	
+}
+
+.navbar-light .navbar-brand{
+	font-size: 28px;
+	font-weight: bold;
+	color: #000
+}
+.navbar-light .navbar-nav .nav-link ,nav-link active {
+	font-weight: bold;
+	font-size: 18px;
+	color: #000;
+	padding: 10px
+	
+}
+nav span {
+	color: #39749d
+}
+
+.navbar-light .navbar-nav .nav-link:hover ,nav-link active:hover{
+    color:#fff;
+	background-color:#39749d; 
+	border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+	
+}
+.navbar .log {
+	list-style-type: none;
+	background-color: #39749d;
+	color: #fff;
+	border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+/*.navbar .log  */
+
+
+/*end nav*/
+
+/*start header*/
+
+.header {
+	background-image: url("../images/web.png");
+	background-size: 100% 100%;
+	position: relative;
+	color: #fff;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: rgba(0, 0, 0,.70);
+	display: flex;
+	align-items: center;
+	height: 100%
+}
+.intro-title{
+	font-size:50px
+}
+
+.intro-body a {
+	text-decoration: none
+}
+
+.intro-body .color {
+	color: #66a2cc
+}
+
+span.price-a {
+	padding: 1rem 1.5rem;
+	border-radius: 50px;
+	text-transform: capitalize;
+	letter-spacing: 0.030em;
+	font-size: large;
+	background-color:#39749d;
+	color: #fff;
+	
+
+}
+
+/*end header*/
+
+
+/*start modal*/
+.overlay2 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+	width: 100%;
+	background-color: rgb(15 ,53, 73 ,.75);
+	display: flex;
+	align-items: center;
+	height: 100%
+}
+.modal-title {
+	color: #66a2cc
+}
+/*end modal*/
+
+/*start section previous projects*/
+.card{
+	box-shadow: 1.5px 2.598px 5px 0px rgb(0 0 0 / 10%)
+}
+.card .card-header{
+	background-color: #39749d
+}
+.card .card-header h3{
+	color: #fff
+}
+
+.card .card-body p {
+	font-size: 18px
+}
+.card .card-body .btn{
+	background-color:#39749d;
+	border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+	color: #fff;
+	padding:5px 20px;
+	    font-size: 18px;
+	
+}
+
+
+/*end section previous projects*/
+
+
+
+
+
+
+
+/*start footer*/
+footer {
+	background-color: #000;
+	text-align: center;
+	padding: 20px;
+	margin-bottom: 0;
+}
+
+footer .aligncenter p  , .credits{
+	color: #fff
+}
+
+.aligncenter span {
+	color: #66a2cc
+}
+
+.credits span {
+	color: #66a2cc
+}
+
+
+.previous{
+	background-color: #fff;
+	margin-top: 50px
+}
+

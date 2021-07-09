@@ -1,0 +1,326 @@
+body{
+	background-color: #f5f5f561;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.navbar {
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	width: 100%;
+	transition: .5s;
+	height: 90px;
+	background: #fff;
+	box-shadow: 1px 2px 15px rgb(100 100 100 / 30%);
+	
+}
+
+.navbar-light .navbar-brand{
+	font-size: 28px;
+	font-weight: bold;
+	color: #000
+}
+.navbar-light .navbar-nav .nav-link ,nav-link active {
+	font-weight: bold;
+	font-size: 18px;
+	color: #000;
+	padding: 10px
+	
+}
+nav span {
+	color: #39749d
+}
+
+.navbar-light .navbar-nav .nav-link:hover ,nav-link active:hover {
+    color:#fff;
+	background-color:#39749d; 
+	border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+	
+}
+.navbar .log {
+	list-style-type: none;
+	background-color: #39749d;
+	color: #fff;
+	border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+/*.navbar .log  */
+
+
+/*end nav*/
+/* cards at admin */
+.card {
+	box-shadow: 1.5px 2.598px 5px 0px rgb(0 0 0 / 10%)
+}
+.card .card-body a{
+	background-color:#39749d 
+}
+
+/*end  cards at admin */
+
+/* card at student profile */
+.student , .cat-student {
+	width: 40%;
+	position: relative;
+	top: 70px;
+	color: #000
+}
+
+.cat-student h4 , .category h3{
+	color: #39749d;
+	font-weight: bold
+}
+.profile  {
+	position: relative;
+	top: 100px;
+	background-color: #fff;
+	padding: 50px
+}
+
+/*tables at  categories in page student profile*/
+
+
+.ta-cat-student ,.cat-doc{
+	position: relative;
+	top: 100px;
+	color: #000;
+	
+}
+
+.table thead tr  {
+    background-color: #065f9f;
+}
+.table tbody {
+    background-color: whitesmoke
+}
+.cat-doc tr a   ,.cat-doc tr a:hover{
+background-color: #065f9f
+}
+.submit  , .submit:hover{
+	background-color: #065f9f;
+	color: #fff;
+}
+/* end tables at  categories in page student profile*/
+
+/*cards at admin.php*/
+.parts{
+	position: relative;
+	top: 100px
+}
+/*end cards at admin.php*/
+
+
+/* card at doctor profile */
+
+.doctor{
+	width: 40%;
+	position: relative;
+	top: 100px;
+	color: #000
+}
+/* categerios in profile doctor */
+.category{
+	width: 40%;
+	position: relative;
+	top: 100px;
+	color: #000
+}
+
+.group{
+	position: relative;
+    top: 290px;
+}
+.submit , .reset{
+	background-color:#065f9f ;
+	color: #fff;
+/*	margin-top: 9px;*/
+}
+
+.submit a{
+	color: #fff;
+	
+}
+/* table of all categeroies*/
+table thead tr {
+	background-color: #065f9f ;
+	color: #fff;
+}
+
+/* form new categories in profile doctor */
+
+.view{
+	padding: 9px;
+    border-radius: 6px;
+	color: #fff;
+}
+.new-cat{
+	position: relative;
+    top: 58px;
+	left: 70px;
+    
+}
+.add{
+	position: relative;
+    top: 62px;
+	background-color:#065f9f ;
+	color: #fff;
+}
+
+.myform{
+	margin-top: 70px;
+}
+.myform label{
+	font-size:20px;
+	font-weight: bold;
+	color: #065f9f
+}
+
+.myform {
+   
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+
+}
+.myform .log{
+	
+
+    position: absolute;
+    top: -60px;
+    margin: auto;
+    font-size:100px;
+    text-align: center;
+    width:790px;
+	height: 243px;
+	padding: 50px;
+    text-align: center;
+    border: 3px solid  #065f9f
+        
+    
+}
+
+
+
+
+
+
+/* proposal in profile doctor*/
+.mytable{
+	margin-top: 150px;
+}
+
+/* update doctor profile*/
+.forms{
+	margin-top: 70px;
+}
+.forms label{
+	font-size:20px;
+	font-weight: bold;
+	color: #065f9f
+}
+
+.forms {
+   
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+
+}
+.forms .sign{
+	
+
+    position: absolute;
+    top: -300px;
+    margin: auto;
+    font-size:100px;
+    text-align: center;
+    width:790px;
+	height: 480px;
+	padding: 50px;
+    text-align: center;
+    border: 3px solid  #065f9f
+        
+    
+}
+
+
+
+/*start footer */
+footer {
+	background-color: #000;
+	text-align: center;
+	padding: 20px;
+	position: relative;
+	top:110px
+	
+}
+
+footer .aligncenter p  , .credits{
+	color: #fff
+}
+
+.aligncenter span {
+	color: #39749d
+}
+
+.credits span {
+	color: #39749d
+}
+/*end footer*/
+
+/* start login for student and doctors */
+
+.form{
+	margin-top: 250px
+}
+.form label{
+	font-size:20px;
+	font-weight: bold;
+	color: #065f9f
+}
+.form {
+   
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.form .log , .form .update{
+	
+
+    position: absolute;
+    top: -400px;
+    margin: auto;
+    font-size:120px;
+    text-align: center;
+    width:800px;
+	padding: 50px;
+    text-align: center;
+    border: 3px solid  #065f9f
+        
+    
+}
+.form .update{
+	top: -500;
+	padding: 0;
+	padding-top:10px;
+}
+.form .log .sign , .form .update .up{
+	background-color: #065f9f;
+	color: #fff;
+}
+
+

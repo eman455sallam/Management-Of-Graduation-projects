@@ -1,0 +1,145 @@
+body{
+	background-color: #f5f5f561;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.navbar {
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	width: 100%;
+	transition: .5s;
+	height: 90px;
+	background: #fff;
+	box-shadow: 1px 2px 15px rgb(100 100 100 / 30%);
+	
+}
+
+.navbar-light .navbar-brand{
+	font-size: 28px;
+	font-weight: bold;
+	color: #000
+}
+.navbar-light .navbar-nav .nav-link ,nav-link active {
+	font-weight: bold;
+	font-size: 18px;
+	color: #000;
+	padding: 10px
+	
+}
+nav span {
+	color: #39749d
+}
+
+.navbar-light .navbar-nav .nav-link:hover ,nav-link active:hover {
+    color:#fff;
+	background-color:#39749d; 
+	border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+	
+}
+.navbar .log {
+	list-style-type: none;
+	background-color: #39749d;
+	color: #fff;
+	border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+/*.navbar .log  */
+
+
+/*end nav*/
+/* cards at admin */
+.card {
+	box-shadow: 1.5px 2.598px 5px 0px rgb(0 0 0 / 10%)
+}
+.card .card-body a{
+	background-color:#39749d 
+}
+
+/*end  cards at admin */
+
+/* card at student profile */
+.student{
+	width: 40%;
+	position: relative;
+	top: 100px;
+	color: #000
+}
+.profile{
+	position: relative;
+	top: 140px;
+}
+.parts{
+	position: relative;
+	top: 100px
+}
+
+/*start footer */
+footer {
+	background-color: #000;
+	text-align: center;
+	padding: 20px;
+	position: relative;
+	top:110px
+	
+}
+
+footer .aligncenter p  , .credits{
+	color: #fff
+}
+
+.aligncenter span {
+	color: #39749d
+}
+
+.credits span {
+	color: #39749d
+}
+/*end footer*/
+
+/* start login for student and doctors */
+
+.form{
+	margin-top: 250px
+}
+.form label{
+	font-size:20px;
+	font-weight: bold;
+	color: #065f9f
+}
+.form {
+   
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.form .log{
+	
+
+    position: absolute;
+    top: -400px;
+    margin: auto;
+    font-size:120px;
+    text-align: center;
+    width:800px;
+	padding: 50px;
+    text-align: center;
+    border: 3px solid  #065f9f
+        
+    
+}
+
+.form .log .sign{
+	background-color: #065f9f;
+	color: #fff;
+}
+
+

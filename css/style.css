@@ -1,0 +1,185 @@
+body{
+	background-color: whitesmoke;
+	font-family: 'Poppins', sans-serif;
+
+	
+}
+/*start nav */
+.navbar {
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	width: 100%;
+	transition: .5s;
+	height: 90px;
+	background: #fff;
+	box-shadow: 1px 2px 15px rgb(100 100 100 / 30%);
+	
+}
+
+.navbar-light .navbar-brand{
+	font-size: 28px;
+	font-weight: bold;
+	color: #000
+}
+.navbar-light .navbar-nav .nav-link ,nav-link active {
+	font-weight: bold;
+	font-size: 18px;
+	color: #000;
+	padding: 10px
+	
+}
+nav span {
+	color: #39749d
+}
+
+.navbar-light .navbar-nav .nav-link:hover ,nav-link active:hover{
+    color:#fff;
+	background-color:#39749d; 
+	border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+	
+}
+.navbar .log {
+	list-style-type: none;
+	background-color: #39749d;
+	color: #fff;
+	border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+
+
+
+/*end navbar*/
+
+.line{
+    border-bottom: 2px solid #065f9f;
+    width: 50%;
+    margin: auto;
+    position: relative;
+    top: 50px;
+}
+
+
+.items .layer{
+  position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+   transition-delay: 0.1s ;
+   transition-duration: 0,3s ;
+   transition: ease-in-out;
+    text-align: center;
+    background-color: #065f9f
+}
+
+
+
+    .layer:hover{
+      opacity: 1;
+        transform: translateY(0);
+        transition-duration: 0.7s;
+      
+
+    }
+
+    .words  h6  ,h5 ,p {
+       
+        opacity: 0;
+    }
+
+    .words  h5 {
+        
+        opacity: 0;
+        margin-top: 10px;
+    }
+    .layer:hover .words  h5 {
+        opacity: 1;
+          transition-delay:0.5s ;
+          transition-duration: 0.8s;
+          margin-top: 0;
+         
+    
+        }
+    .layer:hover .words  h6 {
+    /* transform: translate translateY(20); */
+    opacity: 1;
+      transition-delay:0.8s ;
+      transition-duration: 1s;
+      line-height: 20px;
+     
+
+    }
+    .layer:hover .words p{
+        opacity: 1;
+      transition-delay:1s ;
+      transition-duration: 1s;
+
+    }
+
+    .words{
+        color: #fff;
+    }
+    
+    
+
+
+    
+#myprojects{
+    margin-top: 140px;
+    padding-top: 50px;
+}
+ 
+ .team-info{
+     margin-top: 60px;}
+
+
+
+.myAllProjects{
+    position: relative;
+   left: 86%;
+   bottom: 105px;
+ background-color:#065f9f ;
+ color: white;
+ border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+    padding:8px 15px;
+    font-size: 18px;
+}
+
+
+
+#myprojects h2{
+    border-left: 5px solid #065f9f ;
+    height: 100px;
+    padding-left: 20px;
+  
+}
+
+
+
+/* end page of previous projects*/
+
+
+
+
+footer {
+	background-color: #000;
+	text-align: center;
+	padding: 20px;
+	margin-bottom: 0;
+}
+
+footer .aligncenter p  , .credits{
+	color: #fff
+}
+
+.aligncenter span {
+	color: #66a2cc
+}
+
+.credits span {
+	color: #66a2cc
+}

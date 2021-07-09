@@ -1,0 +1,162 @@
+body{
+	background-color: #f5f5f561;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+/*
+body{
+	background-color:rgb(239,236,240);
+	background-color: #f4eee5;
+
+	
+}
+*/
+/*start nav */
+.navbar {
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	width: 100%;
+	transition: .5s;
+	height: 90px;
+	background: #fff;
+	box-shadow: 1px 2px 15px rgb(100 100 100 / 30%);
+	
+}
+
+.navbar-light .navbar-brand{
+	font-size: 28px;
+	font-weight: bold;
+	color: #000
+}
+.navbar-light .navbar-nav .nav-link ,nav-link active {
+	font-weight: bold;
+	font-size: 18px;
+	color: #000;
+	padding: 10px
+	
+}
+nav span {
+	color: #39749d
+}
+
+.navbar-light .navbar-nav .nav-link:hover ,nav-link active:hover {
+    color:#fff;
+	background-color:#39749d; 
+	border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+	
+}
+.navbar .log {
+	list-style-type: none;
+	background-color: #39749d;
+	color: #fff;
+	border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+/*.navbar .log  */
+
+
+/*end nav*/
+
+/*start cards */
+.card  , .table ,.add-cat {
+	position: relative;
+	top: 100px;
+	color: #000
+}
+/*
+.table{
+	margin-bottom: 50px
+}
+*/
+.card{
+	width: 40%;
+	box-shadow:  1.5px 2.598px 5px 0px rgb(0 0 0 / 10%)
+}
+.add-student ,.add-doc{
+	position: relative;
+	top: 140px;
+	color: #000
+}
+
+.table thead tr{
+    background-color: #065f9f;
+}
+.table tbody {
+    background-color: whitesmoke
+}
+
+.update , .update:hover , .add , .add:hover  , .view , .view:hover , .submit,.submit:hover{
+	background-color: #065f9f;
+	color: #fff;
+
+}
+
+/*alert sucessfully added*/
+.alert{
+	position: relative;
+	top: 110px;
+		
+}
+
+/* end alert sucessfully added*/
+
+
+.card .up-student ,.card .all-proposal ,.card .up-doctors{
+	font-weight: bold;
+	color:#065f9f
+}
+
+/*start form add doctors and students  for admin */
+.form {
+   
+    display: flex;
+    justify-content: center;
+	
+
+}
+
+.form .add-doc , .form .add-student , .form .add-cat , .form .update-student , .form .update-doctor, .form .update-category{
+	
+    background-color: #fff;
+	padding: 50px;
+    text-align: center;
+    border: 3px solid  #065f9f
+    
+}
+
+
+.div-update {
+	margin-top: 75px
+}
+/*end form add doctors and students for admin */
+
+
+/*start footer*/
+footer {
+	position: relative;
+	top:120px;
+	background-color: #000;
+	text-align: center;
+	padding: 20px;
+	margin-bottom: 0;
+}
+
+footer .aligncenter p  , .credits{
+	color: #fff
+}
+
+.aligncenter span {
+	color: #66a2cc
+}
+
+.credits span {
+	color: #66a2cc
+}
+
+
+
+
+
