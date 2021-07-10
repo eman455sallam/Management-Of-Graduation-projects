@@ -112,18 +112,15 @@ if (isset($_POST['submit'])){
       <!--end Navbar-->
 
 
-
-
-
-
       <!-- As a link -->
       <div class="container-fluid">
          <div class="card doctor mt-5 py-2" style="width:40%">
             <div class="card-body">
-               <h2 class="card-title">Doctor profile</h2>
-      
-               <a href="doctor_profile.php"class="btn btn-primary">Profile</a>
-            </div>
+               <h2 class="card-title" style="text-transform: capitalize;">Name: </h2>
+               <h2 class="card-title">Email: </h2>
+               <h2 class="card-title">Bio: </h2>
+
+                  </div>
          </div>
 
 
@@ -136,7 +133,7 @@ if (isset($_POST['submit'])){
                <div class="card-body">
                     
                   <h4 class="card-title"> <?php echo $_SESSION['doctor_full_name'] ; ?> </h4>
-                   <a href="update doctor profile.php" class="btn btn-primary" id="myEditProfile">update profile</a>
+                   <a href="update doctor profile.php" class="btn btn-primary" id="myEditProfile">Edit profile</a>
                
                   </div>
                   
