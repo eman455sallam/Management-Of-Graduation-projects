@@ -71,9 +71,10 @@ include "read/proposal_admin_read.php";
 				<tr >
         <th scope="col"></th>
         <th scope="col">name</th>
-
-				  <th scope="col">link</th>
-				  <th class="w-50" scope="col">Action</th>
+        <th scope="col">description</th>
+        <th scope="col">Team </th>
+        <th scope="col">proposal</th>
+				<th class="w-50" scope="col">Action</th>
 				</tr>
 			  </thead>
 			  <tbody>
@@ -86,7 +87,11 @@ include "read/proposal_admin_read.php";
         <th scope="row"><?php echo  $i; ?></th>
 				
 				  <th ><?php echo $rows['name']; ?></th>
-          <th ><?php echo $rows['proposal']; ?></th>
+          <th ><?php echo $rows['description']; ?></th>
+          <th ><?php echo $rows['team']; ?></th>
+
+          <td>
+          <a type="button" href="<?php echo $rows['proposal']; ?> " class="btn btn-info">proposal link</a></td>
 
 				  <td>
           <a type="button" href="delete/delete_proposal.php?id=<?php echo $rows['id']; ?> " class="btn btn-danger">Delete</a></td>

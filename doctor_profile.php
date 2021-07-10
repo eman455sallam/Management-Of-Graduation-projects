@@ -2,6 +2,11 @@
 session_start();
 include('inc\db_connection.php');
 include_once('inc\validation.php'); 
+include "read/accepted_read.php";
+
+
+ 
+
 $error='';
 
 
@@ -132,11 +137,59 @@ if (isset($_POST['submit'])){
                     
                   <h4 class="card-title"> <?php echo $_SESSION['doctor_full_name'] ; ?> </h4>
                    <a href="update doctor profile.php" class="btn btn-primary" id="myEditProfile">update profile</a>
-               </div>
+               
+                  </div>
+                  
             </div>
+            
          </div>
+         <div class="col-sm-12 col-md-9" >
+         <div class="card text-center">
+ 
+
+  <a class="btn " href="myprojects.php" > veiw details </a>
+
+  <div class="card-body ">
+    <blockquote class="blockquote mb-0">
+    <?php if (mysqli_num_rows($run_query)) { ?>
+      <table class="table table-bordered mt-0" style="" id="myTable">
+         <thead>
+            <tr>
+               <th scope="col"></th>
+               <th scope="col">project name </th>
+               <th scope="col">description</th>
+               
+
+
+            </tr>
+         </thead>
+         <tbody>
+         <?php 
+			  	   $i = 0;
+			  	   while($row = mysqli_fetch_assoc($run_query)){
+			  	   $i++;
+			  	 ?>
+            <tr>
+                <th scope="row"><?php echo $i ; ?></th>
+               <th scope="row"><?php echo $row['name'] ; ?></th>
+               <th scope="row"><?php echo $row['description'] ; ?></th>
+               
+
+
+               
+        
+            </tr>
+            <?php } ?>
+         </tbody>
+      </table>
+      <?php } ?>
+
+    </blockquote>
+  </div>
+</div>
          </div>
 </div>
+
 
          <!--end section-->
         

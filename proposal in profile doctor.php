@@ -58,7 +58,8 @@ include "read/proposal_read.php";
             <tr>
             <th scope="col"> </th>
                <th scope="col">name </th>
-               <th scope="col"> link</th>
+               <th scope="col"> proposal</th>
+               <th scope="col"> description</th>
                <th scope="col">action</th>
             </tr>
          </thead>
@@ -77,6 +78,8 @@ include "read/proposal_read.php";
                 <th scope="row"><?php echo $i ; ?></th>
                <th ><?php echo $row['name'] ; ?></th>
                <th ><?php echo $row['proposal'] ; ?></th>
+               <th ><?php echo $row['	description'] ; ?></th>
+
                
               <td><a type="button" href="project_status_accepted.php?id=<?php echo $row['id']; ?>" class="btn btn-danger">accept</a>
                <a type="button" href="project_status_rejected.php?id=<?php echo $row['id']; ?> " class="btn btn-danger">reject</a></td>

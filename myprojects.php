@@ -55,6 +55,9 @@ include "read/accepted_read.php";
                <th scope="col"></th>
                <th scope="col">project name </th>
                <th scope="col">proposal link</th>
+               <th scope="col">description</th>
+               <th scope="col">team</th>
+
 
             </tr>
          </thead>
@@ -68,6 +71,9 @@ include "read/accepted_read.php";
                 <th scope="row"><?php echo $i ; ?></th>
                <th scope="row"><?php echo $row['name'] ; ?></th>
                <th scope="row"><?php echo $row['proposal'] ; ?></th>
+               <th scope="row"><?php echo $row['description'] ; ?></th>
+               <th scope="row"><?php echo $row['team'] ; ?></th>
+
 
                
         
