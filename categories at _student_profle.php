@@ -59,7 +59,7 @@ include "read/cat_read.php";
                    <th scope="row"  ><?php echo  $i; ?></th>
                    <td style="font-weight:bold; font-size:18px ;text-transform: capitalize"><?php echo $rows['name']; ?></td>
                   
-                   <td><a type="button" href="read/st_read_cat_doc.php?id=<?php echo $rows['id']; ?>"   class="btn submit">submit</a></td>
+                   <td><a type="button" href="read/st_read_cat_doc.php?id=<?php echo $rows['id']; ?>"   class="btn submit">View</a></td>
                   
                </tr>
                

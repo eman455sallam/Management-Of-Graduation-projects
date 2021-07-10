@@ -62,24 +62,29 @@ if (isset($_POST['submit'])) {
    <head>
       <link rel="stylesheet" href="css/bootstrap.min.css">
       <link rel="stylesheet" href="css/fontawesome-all.min.css">
-      <link rel="stylesheet" href="css/index_style.css">
+      <link rel="stylesheet" href="css/style4.css">
    </head>
    <body>
       <!--start navbar-->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-         <a class="navbar-brand" href="#">Management of Graduation Projects</a>
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span>
-         </button>
-         <div class="collapse navbar-collapse " id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-               <li class="nav-item">
-                  <a class="nav-link" href="student_profile.php">Profile</a>
-               </li>
-            </ul>
+      <nav class="navbar navbar-expand-lg navbar-light ">
+         <div class="container">
+            <a class="navbar-brand" href="#">Management <span>of Graduation Projects</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarNav">
+               <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                     <a class="nav-link" href="student_profile.php">Profile</a>
+                  </li>
+               </ul>
+            </div>
          </div>
+         <li class="nav-item log">
+            <a class="nav-link log "  href="student_login.php">Log out</a>
+         </li>
       </nav>
-<!--	   end navbar-->
+      <!--	   end navbar-->
 
 <?php if ($error) { ?>
 		   <div class="alert alert-danger text-center" role="alert">
@@ -92,23 +97,36 @@ if (isset($_POST['submit'])) {
 		    </div>
 		   <?php } ?>
 
-
-      <div class="container-fluid">
-         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="mt-3 w-50 "  id="myForm">
+      <div class=" form">
+    
+         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="send-proposal" style="position: absolute;
+            top: -400px;
+            margin: auto;
+            text-align: center;
+            width:800px;
+            padding: 50px;
+            text-align: center;
+            border: 3px solid  #065f9f;
+		    " id="myForm">
             <div class="form-group">
                <label for="exampleInputEmail1">Project name</label>
                <input  type="text" name="pro_name" class="form-control" id="exampleInputname" placeholder="Enter project name">
             </div>
             <div class="form-group">
+               <label for="exampleInputEmail1">Description of the project </label>
+               <textarea placeholder="Enter your Description" class="form-control"></textarea>
+            </div>
+            <div class="form-group">
                <label for="exampleInputEmail1">Link of proposal</label>
                <input type="text" name="pro_link" class="form-control"   placeholder="Enter link of proposal ">
             </div>
-            <div class="input-group">
-            <label for="exampleInputEmail1">Team</label>
-            <textarea class="form-control" name="pro_description" aria-label="With textarea"></textarea>
-           </div>
-             
-            <button type="submit" name="submit" class="btn btn-primary" class="toggle">send</button>
+            <div class="form-group">
+               <label for="exampleInputEmail1">Names </label>
+               <textarea placeholder="Enter names of your team" class="form-control"></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="background-color: #065f9f;
+               color: #fff;" class="toggle">send</button>
          </form>
       </div>
       <script src="js/jquery-3.3.1.min.js"></script>

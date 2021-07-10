@@ -66,15 +66,15 @@ include "read/proposal_admin_read.php";
 		    </div>
 		   <?php } ?>
 
-			<table class="table table-bordered table-hover table-dark mt-5 w-50 ta_proposal">
+			<table class="table table-bordered table-hover table-dark mt-5  ta_proposal">
 			  <thead >
 				<tr >
         <th scope="col"></th>
         <th scope="col">name</th>
-        <th scope="col">description</th>
+        <th scope="col" >description</th>
         <th scope="col">Team </th>
-        <th scope="col">proposal</th>
-				<th class="w-50" scope="col">Action</th>
+        <th scope="col">proposal link</th>
+				<th  scope="col">Action</th>
 				</tr>
 			  </thead>
 			  <tbody>
@@ -91,7 +91,8 @@ include "read/proposal_admin_read.php";
           <th ><?php echo $rows['team']; ?></th>
 
           <td>
-          <a type="button" href="<?php echo $rows['proposal']; ?> " class="btn btn-info">proposal link</a></td>
+          <a type="button" href="<?php echo $rows['proposal']; ?> " class="btn " style="background-color: #065f9f;
+               color: #fff;">proposal link</a></td>
 
 				  <td>
           <a type="button" href="delete/delete_proposal.php?id=<?php echo $rows['id']; ?> " class="btn btn-danger">Delete</a></td>
@@ -104,6 +105,34 @@ include "read/proposal_admin_read.php";
 			  </tbody>
 			</table>
 		</div>
+     <!-- start footer -->
+     <footer  style=" position:relative;
+     top:150px">
+         <div class="verybottom">
+            <div class="container">
+
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="aligncenter">
+                        <p>
+                           &copy;  <span>Management of Graduation Projects</span>- All right reserved
+                        </p>
+                        <div class="credits">
+                           <!--
+                              All the links in the footer should remain intact.
+                              You can delete the links only if you purchased the pro version.
+                              Licensing information: https://bootstrapmade.com/license/
+                              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Groovin
+                              -->
+                           Designed by <span>Our team </span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+		
         <script src="js/jquery-3.3.1.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>

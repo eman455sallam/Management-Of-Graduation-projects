@@ -323,4 +323,16 @@ footer .aligncenter p  , .credits{
 	color: #fff;
 }
 
+.form .send-proposal {
+	position: absolute;
+	top: -450px;
+	margin: auto;
+	font-size:120px;
+	text-align: center;
+	width:800px;
+	padding: 50px;
+	text-align: center;
+	border: 3px solid  #065f9f;
+	margin-bottom:50px
 
+}
