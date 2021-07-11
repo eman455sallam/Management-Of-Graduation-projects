@@ -37,8 +37,8 @@ include "read/accepted_read.php";
              </li>
          </nav>
       <!-- As a link -->
-      <div class="container-fluid">
-         <div class="card pt-5  mt-5">
+      <div class="container-fluid ">
+         <div class="card   mt-5 projects">
             <div class="card-body">
                <h2 class="card-title"> My projects</h2>
                
@@ -49,14 +49,16 @@ include "read/accepted_read.php";
 
       
       <?php if (mysqli_num_rows($run_query)) { ?>
-      <table class="table table-bordered mt-5" style="" id="myTable">
+      <table class="table table-bordered my-projects mt-5" style="position: relative;
+	top: 100px;" style="posit"id="myTable">
          <thead>
             <tr>
                <th scope="col"></th>
-               <th scope="col">project name </th>
-               <th scope="col">proposal link</th>
-               <th scope="col">description</th>
-               <th scope="col">team</th>
+               <th scope="col">Project name </th>
+               
+               <th scope="col">Description</th>
+               <th scope="col">Team</th>
+               <th scope="col">Proposal link</th>
 
 
             </tr>
@@ -70,9 +72,13 @@ include "read/accepted_read.php";
             <tr>
                 <th scope="row"><?php echo $i ; ?></th>
                <th scope="row"><?php echo $row['name'] ; ?></th>
-               <th scope="row"><?php echo $row['proposal'] ; ?></th>
                <th scope="row"><?php echo $row['description'] ; ?></th>
                <th scope="row"><?php echo $row['team'] ; ?></th>
+               <th>
+          <a type="button" href="<?php echo $row['proposal'] ; ?> " class="btn " style="background-color: #065f9f;
+               color: #fff;">proposal link</a></th>
+               <!-- <th scope="row"><button><a href="<?php echo $row['proposal'] ; ?>"></a></button> Link of proposal</th> -->
+
 
 
                

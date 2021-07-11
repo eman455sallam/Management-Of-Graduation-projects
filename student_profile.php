@@ -42,8 +42,9 @@ include "read/accepted_proposal_for_student.php";
       <div class="container-fluid">
       <div class="card student mt-5 py-2" style="width:40% ">
          <div class="card-body">
-               <h2 class="card-title" style="text-transform: capitalize;">Name: </h2>
-               <h2 class="card-title">Email: </h2>
+         <h3 class="card-title" style="text-transform: capitalize;"> <span style="color:#065f9f ; font-weight:bold">Name:</span>  <?php echo $_SESSION['student_full_name'] ; ?></h3>
+              <h3 class="card-title"><span style="color:#065f9f ; font-weight:bold">Email:</span><?php echo $_SESSION['student_email'] ; ?> </h3>
+ 
          </div>
       </div>
 		  
@@ -66,7 +67,7 @@ include "read/accepted_proposal_for_student.php";
 		  <div class="col-sm-12 col-md-9" >
          <div class="card text-center">
   <div class="card-header">
-    <h3 class="prp">Project supervisor </h3>
+    <h3 class="prp">Project Supervisor </h3>
   </div>
   <div class="card-body ">
   <?php if(mysqli_num_rows($run_sql)){?>
@@ -75,7 +76,7 @@ include "read/accepted_proposal_for_student.php";
     <?php $row=mysqli_fetch_assoc($run_sql); ?>
 
 		<h4>Doctor : <?php echo $row['name']; ?></h4>
-		<a class="btn ">Contact : <?php echo $row['email']; ?> </a>
+		<a class="btn " style="color:#fff">Contact : <?php echo $row['email']; ?> </a>
    
 
     </blockquote>

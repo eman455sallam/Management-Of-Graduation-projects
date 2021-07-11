@@ -116,9 +116,9 @@ if (isset($_POST['submit'])){
       <div class="container-fluid">
          <div class="card doctor mt-5 py-2" style="width:40%">
             <div class="card-body">
-               <h2 class="card-title" style="text-transform: capitalize;">Name: </h2>
-               <h2 class="card-title">Email: </h2>
-               <h2 class="card-title">Bio: </h2>
+               <h2 class="card-title" style="text-transform: capitalize;"> <span style="color:#065f9f ; font-weight:bold">Name:</span>  <?php echo $_SESSION['doctor_full_name'] ; ?></h2>
+               <h2 class="card-title"><span style="color:#065f9f ; font-weight:bold">Email:</span><?php echo $_SESSION['doctor_email'] ; ?> </h2>
+               <!-- <h2 class="card-title">Bio:<?php echo $_SESSION['doctor_bio'] ; ?> </h2> -->
 
                   </div>
          </div>
@@ -143,9 +143,9 @@ if (isset($_POST['submit'])){
          <div class="col-sm-12 col-md-9" >
          <div class="card text-center">
  
-
-  <a class="btn " href="myprojects.php" > veiw details </a>
-
+<div class="text-center">
+  <button class="btn mt-3  btn-primary" style="background-color:#065f9f ; color:#fff" > <a style=" color:fff" href="myprojects.php" > veiw details </a></button>
+</div>
   <div class="card-body ">
     <blockquote class="blockquote mb-0">
     <?php if (mysqli_num_rows($run_query)) { ?>

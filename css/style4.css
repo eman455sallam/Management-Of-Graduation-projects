@@ -82,7 +82,7 @@ nav span {
 /*tables at  categories in page student profile*/
 
 
-.ta-cat-student ,.cat-doc{
+.ta-cat-student ,.cat-doc {
 	position: relative;
 	top: 100px;
 	color: #000;
@@ -114,7 +114,7 @@ background-color: #065f9f
 
 /* card at doctor profile */
 
-.doctor{
+.doctor , .projects{
 	width: 40%;
 	position: relative;
 	top: 100px;

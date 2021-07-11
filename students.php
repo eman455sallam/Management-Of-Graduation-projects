@@ -85,7 +85,7 @@ include "delete/st_delete.php";
 			  	 ?>
       <tr>
       <th scope="row"><?=$i?></th>
-      <td style="font-weight:bold; font-size:18px ;"><?php echo $rows['name']; ?></td>
+      <td style="font-weight:bold; font-size:18px ; text-transform : capitalize"><?php echo $rows['name']; ?></td>
       <td><?php echo $rows['email']; ?></td>
       
         

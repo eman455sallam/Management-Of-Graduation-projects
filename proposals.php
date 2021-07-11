@@ -70,8 +70,8 @@ include "read/proposal_admin_read.php";
 			  <thead >
 				<tr >
         <th scope="col"></th>
-        <th scope="col">name</th>
-        <th scope="col" >description</th>
+        <th scope="col">Name</th>
+        <th scope="col" >Description</th>
         <th scope="col">Team </th>
         <th scope="col">proposal link</th>
 				<th  scope="col">Action</th>
@@ -105,34 +105,7 @@ include "read/proposal_admin_read.php";
 			  </tbody>
 			</table>
 		</div>
-     <!-- start footer -->
-     <footer  style=" position:relative;
-     top:150px">
-         <div class="verybottom">
-            <div class="container">
-
-               <div class="row">
-                  <div class="col-md-12">
-                     <div class="aligncenter">
-                        <p>
-                           &copy;  <span>Management of Graduation Projects</span>- All right reserved
-                        </p>
-                        <div class="credits">
-                           <!--
-                              All the links in the footer should remain intact.
-                              You can delete the links only if you purchased the pro version.
-                              Licensing information: https://bootstrapmade.com/license/
-                              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Groovin
-                              -->
-                           Designed by <span>Our team </span>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </footer>
-		
+    
         <script src="js/jquery-3.3.1.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>

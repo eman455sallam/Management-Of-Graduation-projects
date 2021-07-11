@@ -53,8 +53,16 @@ if (isset($_POST['submit'])) {
  
    <div class="collapse navbar-collapse" id="navbarSupportedContent">
 	 <ul class="navbar-nav ml-auto">
-	   <li class="nav-item ">
-		 <a class="nav-link  " href="profile2 doctors.php">profile <span class="sr-only">(current)</span></a>
+	   
+            <li class="nav-item ">
+               <a class="nav-link  " href="proposal in profile doctor.php">New Proposals <span class="sr-only">(current)</span></a>
+            </li>
+          
+            <li class="nav-item ">
+               <a class="nav-link  " href="myprojects.php">My projects <span class="sr-only">(current)</span></a>
+            </li>
+			<li class="nav-item ">
+		 <a class="nav-link  " href="doctor_profile.php">profile <span class="sr-only">(current)</span></a>
 	   </li>
 	   </ul>
 	   </div>
@@ -67,7 +75,7 @@ if (isset($_POST['submit'])) {
  <div class="container-fluid">
 	<div class="card  category mt-5">
 	   <div class="card-body">
-		  <h2 class="card-title">  all categories</h2>
+		  <h2 class="card-title">  All categories</h2>
 	   <a class="view btn btn-primary" href="categories in profile doctor.php" > view categories </a>
 	   </div>
 	</div>
@@ -89,7 +97,7 @@ if (isset($_POST['submit'])) {
 		    </div>
 		   <?php } ?>
 <div class="myform">
-		<form class="log" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="mt-5  ">
+		<form class="log" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="  ">
 		  <div class="form-group new-cat">
 			<input name="cat_name" type="text" class="form-control w-75 " id="exampleInputText" placeholder="Add new category">
 			

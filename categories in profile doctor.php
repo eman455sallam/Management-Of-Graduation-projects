@@ -61,17 +61,19 @@ if(isset($_POST['submit']))
          </nav>
       <!-- As a link -->
       <div class="container-fluid">
-         <div class="card  mt-5">
+         <div class="card  mt-5" style="position: relative;
+	top: 100px;">
             <div class="card-body">
                <h2 class="card-title"> categories</h2>
                
-               <button id="myAdd" type="submit" class="btn btn-outline-primary mt-2 ml-2">all categories</button>
+               <button id="myAdd" type="submit" class="btn btn-outline-primary ">all categories</button>
                <a class="btn btn-primary" href="form%20new%20categories.php"> add new category</a>
             </div>
          </div>
     
 
-            <form action="<?php  echo $_SERVER['PHP_SELF']; ?>" method="POST">
+            <form action="<?php  echo $_SERVER['PHP_SELF']; ?>" method="POST" style="position: relative;
+	top: 120px;">
                 
                 <div class="form-group">
                     <select class="form-control" name="name">
@@ -80,24 +82,22 @@ if(isset($_POST['submit']))
                           <option value="<?= $value['name'];?>"><?= $value['name']; ?></option> 
                         <?php } ?>
                     </select>
+                    <button class="btn submit mt-3" type="submit"> submit</button>
+               <button class="btn btn-danger  mt-3" type="submit"> Reset</button>
                 </div>
-              <div class="form-group">
-                <div class="container">
-                  <div class="row">
-                    <div class="col"><button type="submit" name="submit" class="col-6 btn btn-primary btn-sm float-left">Submit</button></div>
-                    <div class="col"><button type="submit" name="reset" class="col-6 btn btn-secondary btn-sm float-right">Reset</button></div>
-                  </div>
+                        </div>
                 </div>
               </div>
             </form>
       </div>
       
       <?php if (mysqli_num_rows($run_sql)) { ?>
-      <table class="table table-bordered mt-5" style="display: none;" id="myTable">
+      <table class="table table-bordered mt-5 w-75" style="display: none;position: relative;
+	top: 120px " id="myTable">
          <thead>
             <tr>
                <th scope="col"></th>
-               <th scope="col">categorie-name </th>
+               <th scope="col">category-name </th>
             </tr>
          </thead>
          <tbody>
@@ -108,7 +108,7 @@ if(isset($_POST['submit']))
 			  	 ?>
             <tr>
                 <th scope="row"><?php echo $i ; ?></th>
-               <th scope="row"><?php echo $row_cat['name'] ; ?></th>
+               <th scope="row" style="text-transform:capitalize"><?php echo $row_cat['name'] ; ?></th>
                
         
             </tr>

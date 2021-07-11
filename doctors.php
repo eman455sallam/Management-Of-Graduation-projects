@@ -85,7 +85,7 @@ include "read/doc_read.php";
 			  	 ?>
       <tr>
         <th scope="row"><?php echo  $i; ?></th>
-        <td style="font-weight:bold; font-size:18px ;"><?php echo $rows['name']; ?></td>
+        <td style="font-weight:bold; font-size:18px  text-transform : capitalize ;"><?php echo $rows['name']; ?></td>
         <td ><?php echo $rows['email']; ?></td>
         
         <td><a type="button" href="form update doctor in admin.php?id=<?php echo $rows['id']; ?>" class="btn update">Update</a>
@@ -105,32 +105,7 @@ include "read/doc_read.php";
  
       </div>
 			
-		 <!-- start footer -->
-      <footer>
-         <div class="verybottom">
-            <div class="container">
-
-               <div class="row">
-                  <div class="col-md-12">
-                     <div class="aligncenter">
-                        <p>
-                           &copy;  <span>Management of Graduation Projects</span>- All right reserved
-                        </p>
-                        <div class="credits">
-                           <!--
-                              All the links in the footer should remain intact.
-                              You can delete the links only if you purchased the pro version.
-                              Licensing information: https://bootstrapmade.com/license/
-                              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Groovin
-                              -->
-                           Designed by <span>Our team </span>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </footer>
+ 
 		
 
 

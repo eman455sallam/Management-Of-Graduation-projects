@@ -20,14 +20,7 @@
 // start section header
 
 $(".header").innerHeight($(window).height());
-$(window).resize(function () {	$(".header").innerHeight($(window).height())
-});
 
-
-$(".header .overlay").height($(window).height())
-$(window).resize(function () {
-	$(".header .overlay").height($(window).height())
-});
 
 // end section header
 // section all projects 
