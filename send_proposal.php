@@ -14,18 +14,23 @@ if (isset($_POST['submit'])) {
 
 	$pro_name = validate($_POST['pro_name']);
 	$pro_link= validate($_POST['pro_link']);
-	$pro_description = validate($_POST['pro_description']);
+	$pro_description = validate($_POST['descrption']);
+   $pro_team = validate($_POST['team']);
+
  
 
 	//$user_data = 'name='.$name. '&email='.$email . '&password='.$password;
 
 	if (empty($pro_name)) {
 		 $error=" project name is required";
-	}else if (empty($pro_link)) {
-        $error="proposal link is required";
 	}else if (empty($pro_description)) {
         $error="project description is required";
-	}else if ($pro_name &&  $pro_link  &&  $pro_description)
+	}else if (empty($pro_link)) {
+      $error="proposal link is required";
+ }else if (empty($pro_team)) {
+   $error="Names of team members is required";
+}
+   else if ($pro_name &&    $pro_description && $pro_link  && $pro_team)
 		{
 			if(min_length($pro_name,3) )
 			{
@@ -33,11 +38,12 @@ if (isset($_POST['submit'])) {
 				 {
 				         
     
-                   $query = "INSERT INTO projects(name ,category_id,doctor_id,student_id, proposal, description) 
-                      VALUES('$pro_name' , '$category_id','$doctor_id','$student_id','$pro_link','$pro_description')";
+                   $query = "INSERT INTO projects(name ,category_id,doctor_id,student_id, description, proposal,team) 
+                      VALUES('$pro_name' , '$category_id','$doctor_id','$student_id','$pro_description','$pro_link','$pro_team')";
                    $run_query = mysqli_query($conn, $query);
                            if ($run_query) {
-				               $success="successfully added";}
+				               $success="successfully sended";
+                  }
 							   
                            }else{
 					$error="name must be string not a number";
@@ -83,7 +89,7 @@ if (isset($_POST['submit'])) {
          <li class="nav-item log">
             <a class="nav-link log "  href="student_login.php">Log out</a>
          </li>
-      </nav>
+      </nav> 
       <!--	   end navbar-->
 
 <?php if ($error) { ?>
@@ -114,7 +120,7 @@ if (isset($_POST['submit'])) {
             </div>
             <div class="form-group">
                <label for="exampleInputEmail1">Description of the project </label>
-               <textarea placeholder="Enter your Description" class="form-control"></textarea>
+               <textarea name="descrption" placeholder="Enter your Description" class="form-control"></textarea>
             </div>
             <div class="form-group">
                <label for="exampleInputEmail1">Link of proposal</label>
@@ -122,10 +128,10 @@ if (isset($_POST['submit'])) {
             </div>
             <div class="form-group">
                <label for="exampleInputEmail1">Names </label>
-               <textarea placeholder="Enter names of your team" class="form-control"></textarea>
+               <textarea name="team" placeholder="Enter names of your team" class="form-control"></textarea>
             </div>
             
-            <button type="submit" class="btn btn-primary" style="background-color: #065f9f;
+            <button type="submit" name="submit"class="btn btn-primary" style="background-color: #065f9f;
                color: #fff;" class="toggle">send</button>
          </form>
       </div>

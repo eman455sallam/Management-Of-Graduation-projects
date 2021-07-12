@@ -12,6 +12,7 @@ include "read/accepted_read.php";
       <link rel="stylesheet" href="css/style4.css">
    </head>
    <body>
+   
       <!-- As a link -->
        <!-- start navbar -->
        <nav class="navbar navbar-expand-lg navbar-light ">
@@ -55,10 +56,10 @@ include "read/accepted_read.php";
             <tr>
                <th scope="col"></th>
                <th scope="col">Project name </th>
-               
                <th scope="col">Description</th>
                <th scope="col">Team</th>
                <th scope="col">Proposal link</th>
+               <th scope="col">degree</th>
 
 
             </tr>
@@ -77,6 +78,9 @@ include "read/accepted_read.php";
                <th>
           <a type="button" href="<?php echo $row['proposal'] ; ?> " class="btn " style="background-color: #065f9f;
                color: #fff;">proposal link</a></th>
+                   <th>
+          <a type="button" href="doc_add_degree.php?id=<?php echo $row['id']; ?>" class="btn " style="background-color:  #065f9f;
+               color: #fff;">add </a></th>
                <!-- <th scope="row"><button><a href="<?php echo $row['proposal'] ; ?>"></a></button> Link of proposal</th> -->
 
 

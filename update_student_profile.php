@@ -4,9 +4,6 @@ include('inc\db_connection.php');
 include_once('inc\validation.php'); 
 
 
- 
-
-
 
 if (isset($_POST['submit'])){
   
@@ -54,17 +51,17 @@ if (isset($_POST['submit'])){
                     header("Location: student_profile.php?success=successfully updated");
                      }
          }else {
-                     header("Location: doctors.php?id=$id&error=invalid email");
+                     header("Location:student_profile.php?id=$id&error=invalid email");
                }
               
         } else {
-          header("Location: students.php?id=$id&error=name must be string");
+          header("Location:student_profile.php?id=$id&error=name must be string");
         }        
     }else {
-      header("Location: students.php?id=$id&error=name must be > 3");
+      header("Location:student_profile.php?id=$id&error=name must be > 3");
     }        
   }else {
-   	header("Location: students.php?error=unknown error occurred");
+   	header("Location:student_profile.php?error=unknown error occurred");
    }
   }
   

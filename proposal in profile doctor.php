@@ -14,6 +14,7 @@ include "read/proposal_read.php";
    <body>
       <!-- As a link -->
        <!-- start navbar -->
+       
        <nav class="navbar navbar-expand-lg navbar-light ">
          <div class="container">
         <a class="navbar-brand" href="#">Management  <span class="">Of Graduation Projects</span></a>
@@ -32,8 +33,9 @@ include "read/proposal_read.php";
             <li class="nav-item log">
                <a class="nav-link log "  href="doctor_login.php">Log out</a>
              </li>
-            
+
          </nav>
+
       <!-- As a link -->
           <!--start card-->
       <div class="container-fluid">
@@ -58,29 +60,36 @@ include "read/proposal_read.php";
             <tr>
             <th scope="col"> </th>
                <th scope="col">name </th>
-               <th scope="col"> proposal</th>
                <th scope="col"> description</th>
+               <th scope="col"> proposal</th>
                <th scope="col">action</th>
             </tr>
          </thead>
          <tbody>
             <tr>
             <?php
+            $doc_id=$_SESSION['doctor_id'];
+            if(isset($_GET['var'])){
+               $deactiv_notifications = "UPDATE projects SET notification_status='1'  AND doctor_id=$doc_id";
+               $result = mysqli_query($conn,$deactiv_notifications);
             
+                }
             if(mysqli_num_rows($run_query))
             {
 			  	   $i = 0;
 			  	   while($row = mysqli_fetch_assoc($run_query)){
                     $_SESSION['student_id']= $row['student_id'] ;
+                  
 			  	   $i++;
+                //$_SESSION['notification_num']= $i  ;
 			  	 ?>
             <tr>
-                <th scope="row"><?php echo $i ; ?></th>
+                <th scope="row"><?php echo $i ;   ?></th>
                <th ><?php echo $row['name'] ; ?></th>
-               <th ><?php echo $row['proposal'] ; ?></th>
-               <th ><?php echo $row['	description'] ; ?></th>
-
-               
+               <th ><?php echo $row['description'] ; ?></th>
+               <th>
+          <a type="button" href="<?php echo $row['proposal'] ; ?> " class="btn " style="background-color: #065f9f;
+               color: #fff;">proposal link</a></th>
               <td><a type="button" href="project_status_accepted.php?id=<?php echo $row['id']; ?>" class="btn btn-danger">accept</a>
                <a type="button" href="project_status_rejected.php?id=<?php echo $row['id']; ?> " class="btn btn-danger">reject</a></td>
 

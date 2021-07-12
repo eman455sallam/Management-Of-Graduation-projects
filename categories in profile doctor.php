@@ -82,7 +82,7 @@ if(isset($_POST['submit']))
                           <option value="<?= $value['name'];?>"><?= $value['name']; ?></option> 
                         <?php } ?>
                     </select>
-                    <button class="btn submit mt-3" type="submit"> submit</button>
+                    <button class="btn submit mt-3" name="submit" type="submit"> submit</button>
                <button class="btn btn-danger  mt-3" type="submit"> Reset</button>
                 </div>
                         </div>

@@ -1,8 +1,8 @@
-<?php  
+<?php 
 session_start();
 include('inc\db_connection.php');
 include_once('inc\validation.php'); 
-include "read/accepted_read.php";
+include_once "read/accepted_read.php";
 
 
  
@@ -80,6 +80,16 @@ if (isset($_POST['submit'])){
       <link rel="stylesheet" href="css/style4.css">
    </head>
    <body>
+  <?php 
+       $doc_id=$_SESSION['doctor_id'];
+       $find_notifications = "SELECT * from projects where notification_status = 0  AND doctor_id=$doc_id";
+       $result = mysqli_query($conn,$find_notifications);
+       $count_active = '';
+        while($rows = mysqli_fetch_assoc($result)){
+                $count_active = mysqli_num_rows($result);
+             
+        }
+        ?>
       <!-- start navbar -->
       <nav class="navbar navbar-expand-lg navbar-light ">
          <div class="container">
@@ -95,8 +105,10 @@ if (isset($_POST['submit'])){
             </li>
       
             <li class="nav-item ">
-               <a class="nav-link  " href="proposal in profile doctor.php">New Proposals <span class="sr-only">(current)</span></a>
-            </li>
+               <a class="nav-link  " href="proposal in profile doctor.php?var=show">New Proposals <span class="sr-only">(current)</span></a>
+
+            </li><i class="fa fa-bell"></i><span class="badge "><?php echo $count_active; ?></span>
+
           
             <li class="nav-item ">
                <a class="nav-link  " href="myprojects.php">My projects <span class="sr-only">(current)</span></a>
