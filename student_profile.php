@@ -32,7 +32,7 @@ include "read/accepted_proposal_for_student.php";
   </div>
 	</div>
 	<li class="nav-item log">
-        <a class="nav-link log "  href="student_login.php">Log out</a>
+        <a class="nav-link log "  href="index.php">Log out</a>
       </li>
 </nav>
 <!--end nav-->

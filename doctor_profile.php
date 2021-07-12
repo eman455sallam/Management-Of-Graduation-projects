@@ -118,7 +118,7 @@ if (isset($_POST['submit'])){
         </div>
          </div>
          <li class="nav-item log">
-              <a class="nav-link log "  href="doctor_login.php">Log out</a>
+              <a class="nav-link log "  href="index.php">Log out</a>
             </li>
       </nav>
       <!--end Navbar-->

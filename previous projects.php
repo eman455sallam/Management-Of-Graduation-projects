@@ -1,9 +1,6 @@
 <?php
 include "read/cat_read.php";
 
-$sql = "SELECT * FROM projects  WHERE id  IN (SELECT project_id FROM project_status)";
-$run_sql = mysqli_query($conn, $sql);
-
 ?>
 
 
@@ -16,7 +13,7 @@ $run_sql = mysqli_query($conn, $sql);
            
         </head>
         <body>
-start navbar 
+<!--start navbar -->
 <nav class="navbar navbar-expand-lg navbar-light ">
   <div class="container">
   <a class="navbar-brand" href="#">Management  <span class="">Of Graduation Projects</span></a>
@@ -36,24 +33,32 @@ start navbar
   </div>
   </div>
   <li class="nav-item log">
-        <a class="nav-link log" href="student_login.php">Log in</a>
+        <a class="nav-link log " href="student_login.php">Log in</a>
       </li>
-</nav> 
+</nav>
 <!--end nav-->
 
 <!--start section projects-->
-<?php if(mysqli_num_rows($run_query) > 0){ ?>
 <section id="myprojects">
 <div class="container" >
-<?php foreach($run_query as $key => $value){ ?>
-
-    <h2><?= $value['name']; ?> </h2>
+<?php if(mysqli_num_rows($run_query) > 0){ 
+   $cat=mysqli_fetch_assoc($run_query);
+   $cat_id=$cat['id'];
+   foreach($cat as $key ){
+    $sql="SELECT * FROM projects WHERE category_id='$cat_id'";
+    $run_sql=mysqli_query($conn,$sql);
+   ?>
+     <h2><?php echo $cat['name']; ?></h2>
     <div class="lines"></div>
-    <button class="btn myAllProjects  " id="myAllProjects" >All <?= $value['name']; ?>  Projects</button>
-    <!--start img-->
+    <button class="btn btn  " id="myAllProjects" >All <?php echo $cat['name']; ?> </button>
+   <?php
+  
+  
+   
+   while(   $pro=mysqli_fetch_assoc($run_sql)){
 
-
-<div class="container ">
+?>
+   <div class="container ">
     <div class="row">
     <div class="col-md-4">
     <div class="items">
@@ -61,61 +66,41 @@ start navbar
     <div class="layer "style="height: 80%;" >
         <div class="team-info">
           <div class="words">
-          <?php if(mysqli_num_rows($run_query) > 0){ ?>
-
-          <?php foreach($run_sql as $key => $pro){ ?>
-
-              <h4> <?= $pro['name']; ?> </h4><br>
-            <h5> link of project :<?= $pro['proposal']; ?></h5><br>
-            <h6> Name of students: <?= $pro['description']; ?> <br><br> Name of supervisor: dr mohammed</h6>
+              <h4> Name of project : <?php echo $pro['name'] ;?></h4><br>
+            <h5> link of project : <?php echo $pro['proposal'] ;?></h5><br>
+            <h6> Name of students: ahmed <br><br> Name of supervisor: dr mohammed</h6>
             <p>Degree :</p>
-            <?php } }?>
         </div>
     </div>
     </div>
     </div>
 </div>
-   
+
 <!--end section projects-->
 
-<?php } ?>
+
+<?php
+   }
+  }
+  
+}
+?>
+</section>
+<div class="line"></div>
+  
+
 </div>
 
 
-<?php } ?>
+
+<!--start img-->
 
 
 
-  
-  
-
-
-</section>
-			     <!-- start footer -->
-      <footer>
-         <div class="verybottom">
-            <div class="container">
-
-               <div class="row">
-                  <div class="col-md-12">
-                     <div class="aligncenter">
-                        <p>
-                           &copy;  <span>Management of Graduation Projects</span>- All right reserved
-                        </p>
-                        <div class="credits">
-                           
-                           Designed by <span>Our team </span>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </footer>
 
             <script src="js/jquery-3.3.1.min.js"></script>
             <script src="js/popper.min.js"></script>
             <script src="js/bootstrap.min.js"></script>
-              <script src="js/script.js" ></script> 
+              <script src="js/scrip.js" ></script> 
 </body>
 </html>
